@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 gem "jekyll"
 gem "minimal-mistakes-jekyll", "~> 4.26.2"
+gem "jekyll-archives"
 
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"

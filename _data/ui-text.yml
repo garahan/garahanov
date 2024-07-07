@@ -1,0 +1,17 @@
+breadcrumb_home_label: "Home"
+breadcrumb_separator: "/"
+en:
+  meta_label: "Meta"
+  categories_label: "Categories"
+  tags_label: "Tags"
+  share_on_label: "Share on"
+  follow_label: "Follow"
+
+ja:
+  meta_label: "メタ"
+  categories_label: "カテゴリー"
+  tags_label: "タグ"
+  share_on_label: "共有"
+  follow_label: "フォローする"
+
+# Add other languages here

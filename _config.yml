@@ -7,6 +7,24 @@ minimal_mistakes_skin: "contrast"
 plugins:
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-archives
+
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: archive-taxonomy
+    tag: archive-taxonomy
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
+
+enable_copy_code_button: true
+breadcrumbs: true
 
 # Other settings
 markdown: kramdown
@@ -15,9 +33,11 @@ highlighter: rouge
 # Site settings
 url: "https://garahanov.com"
 baseurl: ""
+rtl: true
+breadcrumbs: true
 author:
-  name: Begench Garahanov
-  avatar: "/assets/images/avatar.png"
+  name: "Begench Garahanov"
+  avatar: "/assets/images/Garahanov.jpeg"
   bio: "Your bio"
   location: "Japan, Tokyo"
   email: "official@garahanov.com"
@@ -46,6 +66,129 @@ defaults:
     values:
       layout: single
       read_time: true
+      show_date: true
       comments: true
       share: true
       related: true
+
+# Comments configuration
+comments:
+  provider: "disqus"
+  disqus:
+    shortname: "your-disqus-shortname"
+
+# Site scripts
+head_scripts:
+  - https://code.jquery.com/jquery-3.2.1.min.js
+  - /assets/js/your-custom-head-script.js
+
+footer_scripts:
+  - /assets/js/your-custom-footer-script.js
+
+# Site teaser image
+header:
+  teaser: /assets/images/Garahanov.jpeg
+
+# Site logo
+logo: "/assets/images/Garahanov.jpeg"
+
+# Permalink structure
+permalink: /:categories/:title/
+
+# Date format
+date_format: "%Y-%m-%d"
+
+# Estimated reading time
+words_per_minute: 200
+
+# Enable copy button on code blocks
+enable_copy_code_button: true
+
+# Custom feed URL
+atom_feed:
+  path: "http://feeds.feedburner.com/youFeedname"
+  hide: true
+
+# Site search settings
+search: true
+lunr:
+  search_within_pages: true
+
+# Algolia search settings
+search_provider: algolia
+algolia:
+  application_id: "YOUR_APPLICATION_ID"
+  index_name: "YOUR_INDEX_NAME"
+  search_only_api_key: "YOUR_SEARCH_ONLY_API_KEY"
+  powered_by: true
+
+# SEO, social sharing, and analytics settings
+google_site_verification: "yourVerificationCode"
+bing_site_verification: "0FC3FD70512616B052E755A56F8952D"
+naver_site_verification: "6BF5A01C0E650B479B612AC5A2184144"
+yandex_site_verification: "2132801JL"
+baidu_site_verification: "code-iA0wScWXN1"
+
+twitter:
+  username: "mmistakes-theme"
+
+facebook:
+  app_id:  # A Facebook app ID
+  publisher:  # A Facebook page URL or ID of the publishing entity
+  username: "michaelrose"
+
+og_image: /assets/images/site-logo.png
+
+social:
+  type: "Person"
+  name: "Garahanov Begench"
+  links:
+    - "https://twitter.com/yourTwitter"
+    - "https://www.facebook.com/yourFacebook"
+    - "https://instagram.com/yourProfile"
+    - "https://www.linkedin.com/in/yourprofile"
+
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "UA-1234567-8"
+    anonymize_ip: false
+
+footer:
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/mmistakes"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/mmistakes"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://instagram.com/mmistakes"
+
+# Archive settings
+category_archive:
+  type: jekyll-archives
+  path: /categories/
+tag_archive:
+  type: jekyll-archives
+  path: /tags/
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: archive-taxonomy
+    tag: archive-taxonomy
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
+
+# HTML compression
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
+
+breadcrumbs: true
+locale: "ja"
