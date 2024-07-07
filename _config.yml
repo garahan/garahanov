@@ -1,29 +1,51 @@
-title: "Your Site Title"
-description: "A brief description of your site"
+title: "garahanov"
+description: "Garahanov Begench"
 theme: minimal-mistakes-jekyll
-minimal_mistakes_skin: "contrast" # or "default"
+minimal_mistakes_skin: "contrast"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-include-cache
+
+# Other settings
+markdown: kramdown
+highlighter: rouge
 
 # Site settings
-url: "https://garahan.github.io"
-baseurl: "/garahanov"
+url: "https://garahanov.com"
+baseurl: ""
 author:
-  name: Your Name
+  name: Begench Garahanov
   avatar: "/assets/images/avatar.png"
   bio: "Your bio"
-  location: "Your location"
-  email: "your-email@example.com"
+  location: "Japan, Tokyo"
+  email: "official@garahanov.com"
   links:
     - label: "GitHub"
       icon: "fab fa-github"
       url: "https://github.com/garahan"
     - label: "Twitter"
       icon: "fab fa-twitter"
-      url: "https://twitter.com/yourusername"
+      url: "https://twitter.com/bega_garahan"
 
-# Plugins
-plugins:
-  - jekyll-feed
+# Navigation links
+nav:
+  - text: "Home"
+    url: "/"
+  - text: "About"
+    url: "/about/"
+  - text: "Publications"
+    url: "/publications/"
 
-# Other settings
-markdown: kramdown
-highlighter: rouge
+# Defaults for posts
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      read_time: true
+      comments: true
+      share: true
+      related: true
