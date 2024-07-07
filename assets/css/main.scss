@@ -1,0 +1,25 @@
+// Import Minimal Mistakes styles
+@import "minimal-mistakes";
+
+// Your custom styles
+// You can add your custom styles here if needed
+
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+// Example of a custom style for the header
+header {
+  background-color: #f8f9fa;
+  padding: 1rem;
+}
+
+// Example of a custom style for links
+a {
+  color: #007bff;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
