@@ -1,7 +1,7 @@
 title: "Begench Garahanov"
 description: "Personal website of Begench Garahanov — researcher, engineer, and writer based in Tokyo, Japan."
 theme: minimal-mistakes-jekyll
-minimal_mistakes_skin: "contrast"
+minimal_mistakes_skin: "dark"
 locale: "ja"
 timezone: Asia/Tokyo
 url: "https://garahanov.com"
@@ -12,7 +12,6 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
   - jekyll-sitemap
-  - jekyll-gist
   - jekyll-paginate
   - jekyll-archives
 
