@@ -7,7 +7,6 @@ gem "jekyll-archives"
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
   gem "jekyll-include-cache", "~> 0.2.1"
-  gem "jekyll-gist", "~> 1.5.0"
   gem "jekyll-paginate", "~> 1.1.0"
   gem "jekyll-sitemap", "~> 1.4.0"
 end
