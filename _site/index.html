@@ -97,12 +97,7 @@
 
 
 
-    <!-- start custom head snippets -->
-
-<!-- insert favicons. use https://realfavicongenerator.net/ -->
-
-<!-- end custom head snippets -->
-
+    
   </head>
 
   <body class="layout--home">
@@ -338,7 +333,7 @@
 <section class="hp-hero">
   <p class="hp-label">Researcher · Engineer · Leader</p>
   <h1 class="hp-name">
-    Begench Garahanov<br />
+    Begench<br />Garahanov
     <em>Based in Tokyo, Japan.</em>
   </h1>
   <p class="hp-sub">
@@ -513,7 +508,7 @@
   var mx = 0, my = 0, rx = 0, ry = 0;
   if (dot && ring && window.matchMedia('(hover:hover)').matches) {
     document.addEventListener('mousemove', function(e){ mx = e.clientX; my = e.clientY; });
-    (function loop(){ rx+=(mx-rx)*.13; ry+=(my-ry)*.13; dot.style.left=mx+'px'; dot.style.top=my+'px'; ring.style.left=rx+'px'; ring.style.top=ry+'px'; requestAnimationFrame(loop); })();
+    (function loop(){ rx+=(mx-rx)*.1; ry+=(my-ry)*.1; dot.style.left=mx+'px'; dot.style.top=my+'px'; ring.style.left=rx+'px'; ring.style.top=ry+'px'; requestAnimationFrame(loop); })();
     document.querySelectorAll('a,button').forEach(function(el){
       el.addEventListener('mouseenter', function(){ document.body.classList.add('h'); });
       el.addEventListener('mouseleave', function(){ document.body.classList.remove('h'); });
@@ -541,19 +536,19 @@
     ];
     var pi = 0, ci = 0, del = false, pause = false;
     function tick() {
-      if (pause) { pause = false; setTimeout(tick, 1600); return; }
+      if (pause) { pause = false; setTimeout(tick, 1800); return; }
       var p = phrases[pi];
       if (!del) {
         el.textContent = p.slice(0, ++ci);
         if (ci === p.length) { del = true; pause = true; setTimeout(tick, 60); return; }
-        setTimeout(tick, 48);
+        setTimeout(tick, 42);
       } else {
         el.textContent = p.slice(0, --ci);
-        if (ci === 0) { del = false; pi = (pi+1) % phrases.length; setTimeout(tick, 320); return; }
-        setTimeout(tick, 24);
+        if (ci === 0) { del = false; pi = (pi+1) % phrases.length; setTimeout(tick, 400); return; }
+        setTimeout(tick, 22);
       }
     }
-    setTimeout(tick, 800);
+    setTimeout(tick, 1000);
   }
 
   // ── Counter animation ───────────────────────────────────
@@ -562,11 +557,11 @@
     var obs = new IntersectionObserver(function(entries){
       entries.forEach(function(e){
         if (!e.isIntersecting) return;
-        var el = e.target, target = +el.dataset.t, start = null, dur = 1200;
+        var el = e.target, target = +el.dataset.t, start = null, dur = 1400;
         requestAnimationFrame(function step(ts){
           if (!start) start = ts;
           var p = Math.min((ts-start)/dur, 1);
-          var eased = 1 - Math.pow(1-p, 3);
+          var eased = 1 - Math.pow(1-p, 4);
           el.textContent = Math.round(eased * target);
           if (p < 1) requestAnimationFrame(step);
         });
@@ -580,44 +575,44 @@
   if (typeof gsap === 'undefined') return;
   gsap.registerPlugin(ScrollTrigger);
 
-  // Hero — stagger in cleanly
-  gsap.timeline({ delay: 0.1 })
-    .to('.hp-label',   { opacity:1, y:0, duration:.5, ease:'power2.out' }, 0)
-    .to('.hp-name',    { opacity:1, y:0, duration:.6, ease:'power2.out' }, .12)
-    .to('.hp-sub',     { opacity:1, y:0, duration:.5, ease:'power2.out' }, .24)
-    .to('.hp-actions', { opacity:1, y:0, duration:.5, ease:'power2.out' }, .34);
-
   // Set initial states
-  gsap.set(['.hp-label','.hp-name','.hp-sub','.hp-actions'], { y: 18 });
+  gsap.set(['.hp-label','.hp-name','.hp-sub','.hp-actions'], { y: 30, opacity: 0 });
 
-  // Stats
+  // Hero — stagger in with spring-like easing
+  gsap.timeline({ delay: 0.2 })
+    .to('.hp-label',   { opacity:1, y:0, duration:.7, ease:'power3.out' }, 0)
+    .to('.hp-name',    { opacity:1, y:0, duration:.8, ease:'power3.out' }, .15)
+    .to('.hp-sub',     { opacity:1, y:0, duration:.7, ease:'power3.out' }, .30)
+    .to('.hp-actions', { opacity:1, y:0, duration:.6, ease:'power3.out' }, .42);
+
+  // Stats — stagger with scale
   gsap.fromTo('.hp-stat',
-    { opacity:0, y:12 },
-    { opacity:1, y:0, duration:.45, stagger:.07, ease:'power2.out',
+    { opacity:0, y:20, scale:0.95 },
+    { opacity:1, y:0, scale:1, duration:.6, stagger:.08, ease:'power3.out',
       scrollTrigger: { trigger:'.hp-stats', start:'top 85%' } });
 
-  // Pillars
+  // Pillars — stagger
   gsap.fromTo('.hp-pillar',
-    { opacity:0, y:16 },
-    { opacity:1, y:0, duration:.5, stagger:.09, ease:'power2.out',
+    { opacity:0, y:28 },
+    { opacity:1, y:0, duration:.7, stagger:.12, ease:'power3.out',
       scrollTrigger: { trigger:'.hp-pillars', start:'top 82%' } });
 
   // Timeline rows
   gsap.fromTo('.hp-tl-row',
-    { opacity:0, x:-12 },
-    { opacity:1, x:0, duration:.5, stagger:.1, ease:'power2.out',
+    { opacity:0, x:-20 },
+    { opacity:1, x:0, duration:.6, stagger:.12, ease:'power3.out',
       scrollTrigger: { trigger:'.hp-tl', start:'top 80%' } });
 
   // Posts
   gsap.fromTo('.hp-post',
-    { opacity:0, y:8 },
-    { opacity:1, y:0, duration:.4, stagger:.07, ease:'power2.out',
+    { opacity:0, y:12 },
+    { opacity:1, y:0, duration:.5, stagger:.08, ease:'power3.out',
       scrollTrigger: { trigger:'.hp-posts', start:'top 82%' } });
 
   // Contact
   gsap.fromTo('.hp-contact',
-    { opacity:0, y:16 },
-    { opacity:1, y:0, duration:.5, ease:'power2.out',
+    { opacity:0, y:24 },
+    { opacity:1, y:0, duration:.7, ease:'power3.out',
       scrollTrigger: { trigger:'.hp-contact', start:'top 85%' } });
 
 })();
@@ -782,6 +777,52 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
+        <a href="/jekyll/update/welcome-to-jekyll/" rel="permalink">Welcome to Jekyll!
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-07-07T17:03:38+09:00">2024-07-07</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different wa...</p>
+  </article>
+</div>
+
+  
+    
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
         <a href="/personal/career/from-chemistry-to-policy-science/" rel="permalink">From Applied Chemistry to Policy Science — My Journey So Far
 </a>
       
@@ -846,9 +887,7 @@
 
     <div id="footer" class="page__footer">
       <footer>
-        <!-- start custom footer snippets -->
-
-<!-- end custom footer snippets -->
+        
         <div class="page__footer-follow">
   <ul class="social-icons">
     

@@ -11,7 +11,7 @@ author_profile: true
 <section class="hp-hero">
   <p class="hp-label">Researcher · Engineer · Leader</p>
   <h1 class="hp-name">
-    Begench Garahanov<br>
+    Begench<br>Garahanov
     <em>Based in Tokyo, Japan.</em>
   </h1>
   <p class="hp-sub">
@@ -184,7 +184,7 @@ author_profile: true
   var mx = 0, my = 0, rx = 0, ry = 0;
   if (dot && ring && window.matchMedia('(hover:hover)').matches) {
     document.addEventListener('mousemove', function(e){ mx = e.clientX; my = e.clientY; });
-    (function loop(){ rx+=(mx-rx)*.13; ry+=(my-ry)*.13; dot.style.left=mx+'px'; dot.style.top=my+'px'; ring.style.left=rx+'px'; ring.style.top=ry+'px'; requestAnimationFrame(loop); })();
+    (function loop(){ rx+=(mx-rx)*.1; ry+=(my-ry)*.1; dot.style.left=mx+'px'; dot.style.top=my+'px'; ring.style.left=rx+'px'; ring.style.top=ry+'px'; requestAnimationFrame(loop); })();
     document.querySelectorAll('a,button').forEach(function(el){
       el.addEventListener('mouseenter', function(){ document.body.classList.add('h'); });
       el.addEventListener('mouseleave', function(){ document.body.classList.remove('h'); });
@@ -212,19 +212,19 @@ author_profile: true
     ];
     var pi = 0, ci = 0, del = false, pause = false;
     function tick() {
-      if (pause) { pause = false; setTimeout(tick, 1600); return; }
+      if (pause) { pause = false; setTimeout(tick, 1800); return; }
       var p = phrases[pi];
       if (!del) {
         el.textContent = p.slice(0, ++ci);
         if (ci === p.length) { del = true; pause = true; setTimeout(tick, 60); return; }
-        setTimeout(tick, 48);
+        setTimeout(tick, 42);
       } else {
         el.textContent = p.slice(0, --ci);
-        if (ci === 0) { del = false; pi = (pi+1) % phrases.length; setTimeout(tick, 320); return; }
-        setTimeout(tick, 24);
+        if (ci === 0) { del = false; pi = (pi+1) % phrases.length; setTimeout(tick, 400); return; }
+        setTimeout(tick, 22);
       }
     }
-    setTimeout(tick, 800);
+    setTimeout(tick, 1000);
   }
 
   // ── Counter animation ───────────────────────────────────
@@ -233,11 +233,11 @@ author_profile: true
     var obs = new IntersectionObserver(function(entries){
       entries.forEach(function(e){
         if (!e.isIntersecting) return;
-        var el = e.target, target = +el.dataset.t, start = null, dur = 1200;
+        var el = e.target, target = +el.dataset.t, start = null, dur = 1400;
         requestAnimationFrame(function step(ts){
           if (!start) start = ts;
           var p = Math.min((ts-start)/dur, 1);
-          var eased = 1 - Math.pow(1-p, 3);
+          var eased = 1 - Math.pow(1-p, 4);
           el.textContent = Math.round(eased * target);
           if (p < 1) requestAnimationFrame(step);
         });
@@ -251,44 +251,44 @@ author_profile: true
   if (typeof gsap === 'undefined') return;
   gsap.registerPlugin(ScrollTrigger);
 
-  // Hero — stagger in cleanly
-  gsap.timeline({ delay: 0.1 })
-    .to('.hp-label',   { opacity:1, y:0, duration:.5, ease:'power2.out' }, 0)
-    .to('.hp-name',    { opacity:1, y:0, duration:.6, ease:'power2.out' }, .12)
-    .to('.hp-sub',     { opacity:1, y:0, duration:.5, ease:'power2.out' }, .24)
-    .to('.hp-actions', { opacity:1, y:0, duration:.5, ease:'power2.out' }, .34);
-
   // Set initial states
-  gsap.set(['.hp-label','.hp-name','.hp-sub','.hp-actions'], { y: 18 });
+  gsap.set(['.hp-label','.hp-name','.hp-sub','.hp-actions'], { y: 30, opacity: 0 });
 
-  // Stats
+  // Hero — stagger in with spring-like easing
+  gsap.timeline({ delay: 0.2 })
+    .to('.hp-label',   { opacity:1, y:0, duration:.7, ease:'power3.out' }, 0)
+    .to('.hp-name',    { opacity:1, y:0, duration:.8, ease:'power3.out' }, .15)
+    .to('.hp-sub',     { opacity:1, y:0, duration:.7, ease:'power3.out' }, .30)
+    .to('.hp-actions', { opacity:1, y:0, duration:.6, ease:'power3.out' }, .42);
+
+  // Stats — stagger with scale
   gsap.fromTo('.hp-stat',
-    { opacity:0, y:12 },
-    { opacity:1, y:0, duration:.45, stagger:.07, ease:'power2.out',
+    { opacity:0, y:20, scale:0.95 },
+    { opacity:1, y:0, scale:1, duration:.6, stagger:.08, ease:'power3.out',
       scrollTrigger: { trigger:'.hp-stats', start:'top 85%' } });
 
-  // Pillars
+  // Pillars — stagger
   gsap.fromTo('.hp-pillar',
-    { opacity:0, y:16 },
-    { opacity:1, y:0, duration:.5, stagger:.09, ease:'power2.out',
+    { opacity:0, y:28 },
+    { opacity:1, y:0, duration:.7, stagger:.12, ease:'power3.out',
       scrollTrigger: { trigger:'.hp-pillars', start:'top 82%' } });
 
   // Timeline rows
   gsap.fromTo('.hp-tl-row',
-    { opacity:0, x:-12 },
-    { opacity:1, x:0, duration:.5, stagger:.1, ease:'power2.out',
+    { opacity:0, x:-20 },
+    { opacity:1, x:0, duration:.6, stagger:.12, ease:'power3.out',
       scrollTrigger: { trigger:'.hp-tl', start:'top 80%' } });
 
   // Posts
   gsap.fromTo('.hp-post',
-    { opacity:0, y:8 },
-    { opacity:1, y:0, duration:.4, stagger:.07, ease:'power2.out',
+    { opacity:0, y:12 },
+    { opacity:1, y:0, duration:.5, stagger:.08, ease:'power3.out',
       scrollTrigger: { trigger:'.hp-posts', start:'top 82%' } });
 
   // Contact
   gsap.fromTo('.hp-contact',
-    { opacity:0, y:16 },
-    { opacity:1, y:0, duration:.5, ease:'power2.out',
+    { opacity:0, y:24 },
+    { opacity:1, y:0, duration:.7, ease:'power3.out',
       scrollTrigger: { trigger:'.hp-contact', start:'top 85%' } });
 
 })();
