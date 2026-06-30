@@ -24,89 +24,89 @@ var store = [{
         "teaser": null
       },{
     "title": "About",
-    "excerpt":"Begench Garahanov GARAHANOV BEGENCH Born October 19, 1994 Master’s candidate at Waseda University Graduate School of Social Sciences, specializing in Policy Science. Applied Chemistry engineer turned policy scientist, currently working as a Technical Expert at Apple Japan. My mission is to bridge engineering, econometrics, and global leadership to solve complex...","url": "http://localhost:4001/about/"
+    "excerpt":"Begench Garahanov GARAHANOV BEGENCH Born October 19, 1994 Master’s candidate at Waseda University Graduate School of Social Sciences, specializing in Policy Science. Applied Chemistry engineer turned policy scientist, currently working as a Technical Expert at Apple Japan. My mission is to bridge engineering, econometrics, and global leadership to solve complex...","url": "https://garahanov.com/about/"
   },{
     "title": "Categories",
-    "excerpt":" ","url": "http://localhost:4001/categories/"
+    "excerpt":" ","url": "https://garahanov.com/categories/"
   },{
     "title": "Curriculum Vitae",
-    "excerpt":"Curriculum Vitae GARAHANOV BEGENCH がらはのふ べげんち Born: October 19, 1994 Tokyo, Japan Academic History Year Month Institution Program 2016 10 Hallym Japanese Language Institute Enrolled 2017 03 Hallym Japanese Language Institute Graduated 2017 04 Tokai University, Japanese Language Research Dept. Enrolled 2018 03 Tokai University, Japanese Language Research Dept. Graduated...","url": "http://localhost:4001/cv/"
+    "excerpt":"Curriculum Vitae GARAHANOV BEGENCH がらはのふ べげんち Born: October 19, 1994 Tokyo, Japan Academic History Year Month Institution Program 2016 10 Hallym Japanese Language Institute Enrolled 2017 03 Hallym Japanese Language Institute Graduated 2017 04 Tokai University, Japanese Language Research Dept. Enrolled 2018 03 Tokai University, Japanese Language Research Dept. Graduated...","url": "https://garahanov.com/cv/"
   },{
     "title": "Projects",
-    "excerpt":"Projects &amp; Initiatives A selection of academic, professional, and personal projects that reflect my interdisciplinary approach. Academic Research Policy Prediction Using Large-Scale Data Waseda University · 2024–2026 · Python, Stata Master's thesis project applying econometric modeling to policy prediction. Uses large-scale administrative data to forecast outcomes of policy interventions, combining...","url": "http://localhost:4001/projects/"
+    "excerpt":"Projects &amp; Initiatives A selection of academic, professional, and personal projects that reflect my interdisciplinary approach. Academic Research Policy Prediction Using Large-Scale Data Waseda University · 2024–2026 · Python, Stata Master's thesis project applying econometric modeling to policy prediction. Uses large-scale administrative data to forecast outcomes of policy interventions, combining...","url": "https://garahanov.com/projects/"
   },{
     "title": "Publications",
-    "excerpt":"Publications &amp; Presentations Journal Articles Modeling the Conversion Process of Syngas to Methanol Production Begench Charyyevich Garahanov Proceedings of International Scientific-Practical Conference «Sustainable Development Goals: Youth Policy and Innovative Technologies», February 15–16, 2023, Oguz Han Engineering and Technology University of Turkmenistan, Ashgabat Developed a digital twin of a chemical methanol...","url": "http://localhost:4001/publications/"
+    "excerpt":"Publications &amp; Presentations Journal Articles Modeling the Conversion Process of Syngas to Methanol Production Begench Charyyevich Garahanov Proceedings of International Scientific-Practical Conference «Sustainable Development Goals: Youth Policy and Innovative Technologies», February 15–16, 2023, Oguz Han Engineering and Technology University of Turkmenistan, Ashgabat Developed a digital twin of a chemical methanol...","url": "https://garahanov.com/publications/"
   },{
     "title": "Tags",
-    "excerpt":" ","url": "http://localhost:4001/tags/"
+    "excerpt":" ","url": "https://garahanov.com/tags/"
   },{
     "title": "Posts",
-    "excerpt":" ","url": "http://localhost:4001/year-archive/"
+    "excerpt":" ","url": "https://garahanov.com/year-archive/"
   },{
     "title": "welcome",
-    "excerpt":"","url": "http://localhost:4001/tags/welcome/"
+    "excerpt":"","url": "https://garahanov.com/tags/welcome/"
   },{
     "title": "personal",
-    "excerpt":"","url": "http://localhost:4001/tags/personal/"
+    "excerpt":"","url": "https://garahanov.com/tags/personal/"
   },{
     "title": "first-post",
-    "excerpt":"","url": "http://localhost:4001/tags/first-post/"
+    "excerpt":"","url": "https://garahanov.com/tags/first-post/"
   },{
     "title": "career",
-    "excerpt":"","url": "http://localhost:4001/tags/career/"
+    "excerpt":"","url": "https://garahanov.com/tags/career/"
   },{
     "title": "education",
-    "excerpt":"","url": "http://localhost:4001/tags/education/"
+    "excerpt":"","url": "https://garahanov.com/tags/education/"
   },{
     "title": "econometrics",
-    "excerpt":"","url": "http://localhost:4001/tags/econometrics/"
+    "excerpt":"","url": "https://garahanov.com/tags/econometrics/"
   },{
     "title": "python",
-    "excerpt":"","url": "http://localhost:4001/tags/python/"
+    "excerpt":"","url": "https://garahanov.com/tags/python/"
   },{
     "title": "stata",
-    "excerpt":"","url": "http://localhost:4001/tags/stata/"
+    "excerpt":"","url": "https://garahanov.com/tags/stata/"
   },{
     "title": "policy-science",
-    "excerpt":"","url": "http://localhost:4001/tags/policy-science/"
+    "excerpt":"","url": "https://garahanov.com/tags/policy-science/"
   },{
     "title": "data-analysis",
-    "excerpt":"","url": "http://localhost:4001/tags/data-analysis/"
+    "excerpt":"","url": "https://garahanov.com/tags/data-analysis/"
   },{
     "title": "engineering",
-    "excerpt":"","url": "http://localhost:4001/tags/engineering/"
+    "excerpt":"","url": "https://garahanov.com/tags/engineering/"
   },{
     "title": "social-science",
-    "excerpt":"","url": "http://localhost:4001/tags/social-science/"
+    "excerpt":"","url": "https://garahanov.com/tags/social-science/"
   },{
     "title": "interdisciplinary",
-    "excerpt":"","url": "http://localhost:4001/tags/interdisciplinary/"
+    "excerpt":"","url": "https://garahanov.com/tags/interdisciplinary/"
   },{
     "title": "tokyo-marathon",
-    "excerpt":"","url": "http://localhost:4001/tags/tokyo-marathon/"
+    "excerpt":"","url": "https://garahanov.com/tags/tokyo-marathon/"
   },{
     "title": "running",
-    "excerpt":"","url": "http://localhost:4001/tags/running/"
+    "excerpt":"","url": "https://garahanov.com/tags/running/"
   },{
     "title": "motivation",
-    "excerpt":"","url": "http://localhost:4001/tags/motivation/"
+    "excerpt":"","url": "https://garahanov.com/tags/motivation/"
   },{
     "title": "personal",
-    "excerpt":"","url": "http://localhost:4001/categories/personal/"
+    "excerpt":"","url": "https://garahanov.com/categories/personal/"
   },{
     "title": "career",
-    "excerpt":"","url": "http://localhost:4001/categories/career/"
+    "excerpt":"","url": "https://garahanov.com/categories/career/"
   },{
     "title": "research",
-    "excerpt":"","url": "http://localhost:4001/categories/research/"
+    "excerpt":"","url": "https://garahanov.com/categories/research/"
   },{
     "title": "methodology",
-    "excerpt":"","url": "http://localhost:4001/categories/methodology/"
+    "excerpt":"","url": "https://garahanov.com/categories/methodology/"
   },{
     "title": "reflection",
-    "excerpt":"","url": "http://localhost:4001/categories/reflection/"
+    "excerpt":"","url": "https://garahanov.com/categories/reflection/"
   },{
     "title": "fitness",
-    "excerpt":"","url": "http://localhost:4001/categories/fitness/"
+    "excerpt":"","url": "https://garahanov.com/categories/fitness/"
   }]
