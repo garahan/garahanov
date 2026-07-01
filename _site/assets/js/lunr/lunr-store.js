@@ -5,6 +5,12 @@ var store = [{
         "url": "/personal/career/from-chemistry-to-policy-science/",
         "teaser": null
       },{
+        "title": "Welcome to Jekyll!",
+        "excerpt":"You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when...","categories": ["jekyll","update"],
+        "tags": [],
+        "url": "/jekyll/update/welcome-to-jekyll/",
+        "teaser": null
+      },{
         "title": "Quantitative Methods for Policy Analysis: A Practical Overview",
         "excerpt":"Policy analysis without data is just opinion. In this post, I want to share the quantitative methods I rely on in my research at Waseda University, and explain why each one matters. The Foundation: Ordinary Least Squares (OLS) Everything starts with OLS regression. It’s the workhorse of econometrics — simple,...","categories": ["research","methodology"],
         "tags": ["econometrics","python","stata","policy-science","data-analysis"],
@@ -23,6 +29,9 @@ var store = [{
         "url": "/personal/fitness/tokyo-marathon-2024/",
         "teaser": null
       },{
+    "title": "About",
+    "excerpt":"This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at jekyllrb.com You can find the source code for Minima at GitHub: jekyll / minima You can find the source code for Jekyll at GitHub: jekyll...","url": "https://garahanov.com/about/"
+  },{
     "title": "About",
     "excerpt":"Begench Garahanov GARAHANOV BEGENCH Born October 19, 1994 Master’s candidate at Waseda University Graduate School of Social Sciences, specializing in Policy Science. Applied Chemistry engineer turned policy scientist, currently working as a Technical Expert at Apple Japan. My mission is to bridge engineering, econometrics, and global leadership to solve complex...","url": "https://garahanov.com/about/"
   },{
@@ -97,6 +106,12 @@ var store = [{
   },{
     "title": "career",
     "excerpt":"","url": "https://garahanov.com/categories/career/"
+  },{
+    "title": "jekyll",
+    "excerpt":"","url": "https://garahanov.com/categories/jekyll/"
+  },{
+    "title": "update",
+    "excerpt":"","url": "https://garahanov.com/categories/update/"
   },{
     "title": "research",
     "excerpt":"","url": "https://garahanov.com/categories/research/"
