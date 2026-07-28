@@ -79,7 +79,7 @@ export const experience = [
   },
   {
     period: "2024.06–Present",
-    role: "Technical Expert",
+    role: "Apple Retail (current role: Technical Expert)",
     org: "Apple Japan",
   },
 ];
@@ -163,7 +163,7 @@ export const projects = [
   {
     category: "Professional",
     title: "Technical Troubleshooting and Customer Support",
-    meta: "Apple Japan · 2024–Present",
+    meta: "Apple Japan · Current role",
     description:
       "Troubleshoot and diagnose selected Apple hardware and software issues, explain technical findings and repair options clearly, and share product and service knowledge with customers and colleagues.",
     tags: [
