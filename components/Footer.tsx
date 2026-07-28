@@ -21,7 +21,7 @@ export default function Footer() {
         <div className="flex flex-col gap-1">
           <p className="text-sm font-light text-[#F5F5F0]">Begench Garahanov</p>
           <p className="text-[10px] uppercase tracking-[0.3em] text-[#8A8A8E]">
-            Tokyo, Japan · est. 1994
+            Technical Expert · Quantitative Research
           </p>
         </div>
         <div className="flex items-center gap-5 text-[11px] uppercase tracking-[0.2em] text-[#8A8A8E]">

@@ -1,30 +1,25 @@
 ---
-title: "Life Between Two Worlds: Engineering and Social Science"
+title: "Between Engineering and Social Science"
 date: "2025-03-20"
 location: "Tokyo, Japan"
 category: "reflection"
-tags: ["personal", "career", "engineering", "social-science", "interdisciplinary"]
-excerpt: "On the challenges and rewards of straddling engineering and social science — and why the intersection is where the most interesting problems live."
+tags: ["engineering", "social-science", "interdisciplinary"]
+excerpt: "Why I treat engineering and social science as complementary ways of understanding complex systems."
 ---
 
-People often ask me why I switched from Applied Chemistry to Policy Science. The honest answer is: I didn't switch. I expanded.
+Moving from Applied Chemistry to Policy Sciences was not a rejection of
+engineering. It was an expansion of the questions I wanted to answer.
 
-## The Engineer's Mindset
+Engineering trained me to think in systems: define the problem, identify the
+components, understand their interactions, and test whether a proposed solution
+works. Graduate study at Waseda added econometric and policy-analysis methods
+for examining how economic structures and institutions shape outcomes.
 
-Four years of engineering at Tokai University taught me to think in systems. Break a problem into components. Model each component. Understand the interactions. Optimize. This way of thinking is permanent — it shapes how I approach everything, from research questions to team management at Apple.
+The two perspectives are complementary. Energy policy sits between technical
+systems and political economy. Technology adoption depends on engineering
+quality, institutions, and human behavior. Customer technology work likewise
+requires both accurate diagnosis and an understanding of the person affected by
+the problem.
 
-Engineering also taught me humility: your model is always wrong, but some models are useful. The question isn't "is this perfect?" but "does this help me make a better decision than I would without it?"
-
-## The Social Scientist's Toolkit
-
-At Waseda, I added a new set of tools: econometric methods, causal inference, policy evaluation frameworks. These tools let me ask questions that engineering alone couldn't answer — not just "how does this system work?" but "what happens to people when we change it?"
-
-Social science also taught me to take context seriously. A policy that works in one country may fail in another, not because the economics is wrong, but because the institutions, culture, and history are different. Engineering tends to seek universal solutions; social science respects particularity.
-
-## The Intersection
-
-The most interesting problems live at the intersection. Energy policy requires both an understanding of thermodynamics and an understanding of political economy. Technology adoption depends on both engineering quality and social factors. Team performance at Apple is shaped by both operational metrics and cultural dynamics.
-
-I don't see myself as half-engineer and half-social-scientist. I see myself as someone who uses the full toolkit, from both traditions, to solve problems that don't fit neatly into either category.
-
-That's the space I want to work in. That's where I think the future is.
+That intersection—technical evidence, quantitative analysis, and clear human
+communication—is where I do my best work.

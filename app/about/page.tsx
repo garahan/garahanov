@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   Mail,
@@ -50,12 +49,10 @@ export default function AboutPage() {
               className="flex-none"
             >
               <div className="rounded-full border border-white/10 bg-white/5 p-1.5 backdrop-blur-2xl">
-                <Image
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
                   src={profile.avatar}
-                  alt={`Portrait of ${profile.name}`}
-                  width={128}
-                  height={128}
-                  priority
+                  alt={profile.name}
                   className="h-28 w-28 rounded-full object-cover sm:h-32 sm:w-32"
                 />
               </div>
@@ -92,11 +89,11 @@ export default function AboutPage() {
                 transition={{ duration: FADE, delay: 1, ease: "easeOut" }}
               >
                 <span className="flex items-center gap-2">
-                  <Briefcase className="h-3.5 w-3.5 text-[#0A84FF]" strokeWidth={1.5} aria-hidden="true" />
+                  <Briefcase className="h-3.5 w-3.5 text-[#0A84FF]" strokeWidth={1.5} />
                   {profile.currentRole}
                 </span>
                 <span className="flex items-center gap-2">
-                  <GraduationCap className="h-3.5 w-3.5 text-[#FF9F0A]" strokeWidth={1.5} aria-hidden="true" />
+                  <GraduationCap className="h-3.5 w-3.5 text-[#FF9F0A]" strokeWidth={1.5} />
                   {profile.currentStudy}
                 </span>
               </motion.div>
@@ -299,7 +296,8 @@ export default function AboutPage() {
               >
                 <Award
                   className="mt-0.5 h-4 w-4 flex-none text-[#FF9F0A]"
-                  strokeWidth={1.5} aria-hidden="true" />
+                  strokeWidth={1.5}
+                />
                 <div className="flex flex-col gap-1">
                   <h3 className="text-sm font-light text-[#F5F5F0] sm:text-base">
                     {a.title}
@@ -336,33 +334,18 @@ export default function AboutPage() {
             transition={{ duration: FADE, delay: 0.15, ease: "easeOut" }}
             className="mt-10 flex flex-col gap-4"
           >
-            {/* Emails */}
             <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
               <a
-                href={`mailto:${profile.contact.emailAcademic}`}
+                href={`mailto:${profile.contact.email}`}
                 className="qg-tap group flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-5 py-4 backdrop-blur-2xl transition-colors duration-500 hover:border-white/20 hover:bg-white/[0.07]"
               >
-                <Mail className="h-4 w-4 flex-none text-[#0A84FF]" strokeWidth={1.5} aria-hidden="true" />
+                <Mail className="h-4 w-4 flex-none text-[#0A84FF]" strokeWidth={1.5} />
                 <div className="flex flex-col">
                   <span className="text-[10px] uppercase tracking-[0.3em] text-[#8A8A8E]">
-                    Academic
+                    Email
                   </span>
                   <span className="text-sm font-light text-[#F5F5F0]">
-                    {profile.contact.emailAcademic}
-                  </span>
-                </div>
-              </a>
-              <a
-                href={`mailto:${profile.contact.emailPersonal}`}
-                className="qg-tap group flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-5 py-4 backdrop-blur-2xl transition-colors duration-500 hover:border-white/20 hover:bg-white/[0.07]"
-              >
-                <Mail className="h-4 w-4 flex-none text-[#0A84FF]" strokeWidth={1.5} aria-hidden="true" />
-                <div className="flex flex-col">
-                  <span className="text-[10px] uppercase tracking-[0.3em] text-[#8A8A8E]">
-                    Personal
-                  </span>
-                  <span className="text-sm font-light text-[#F5F5F0]">
-                    {profile.contact.emailPersonal}
+                    {profile.contact.email}
                   </span>
                 </div>
               </a>
@@ -376,7 +359,7 @@ export default function AboutPage() {
                 rel="noopener noreferrer"
                 className="qg-tap group flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-5 py-4 backdrop-blur-2xl transition-colors duration-500 hover:border-white/20 hover:bg-white/[0.07]"
               >
-                <ExternalLink className="h-4 w-4 flex-none text-[#32D74B]" strokeWidth={1.5} aria-hidden="true" />
+                <ExternalLink className="h-4 w-4 flex-none text-[#32D74B]" strokeWidth={1.5} />
                 <div className="flex flex-col">
                   <span className="text-[10px] uppercase tracking-[0.3em] text-[#8A8A8E]">
                     GitHub
@@ -387,28 +370,12 @@ export default function AboutPage() {
                 </div>
               </a>
               <a
-                href={profile.contact.twitter}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="qg-tap group flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-5 py-4 backdrop-blur-2xl transition-colors duration-500 hover:border-white/20 hover:bg-white/[0.07]"
-              >
-                <ExternalLink className="h-4 w-4 flex-none text-[#0A84FF]" strokeWidth={1.5} aria-hidden="true" />
-                <div className="flex flex-col">
-                  <span className="text-[10px] uppercase tracking-[0.3em] text-[#8A8A8E]">
-                    Twitter / X
-                  </span>
-                  <span className="text-sm font-light text-[#F5F5F0]">
-                    @bega_garahan
-                  </span>
-                </div>
-              </a>
-              <a
                 href={profile.contact.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="qg-tap group flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-5 py-4 backdrop-blur-2xl transition-colors duration-500 hover:border-white/20 hover:bg-white/[0.07]"
               >
-                <ExternalLink className="h-4 w-4 flex-none text-[#FF9F0A]" strokeWidth={1.5} aria-hidden="true" />
+                <ExternalLink className="h-4 w-4 flex-none text-[#FF9F0A]" strokeWidth={1.5} />
                 <div className="flex flex-col">
                   <span className="text-[10px] uppercase tracking-[0.3em] text-[#8A8A8E]">
                     LinkedIn
@@ -422,7 +389,7 @@ export default function AboutPage() {
 
             {/* Location */}
             <div className="flex items-center gap-3 px-1 pt-2 text-xs text-[#8A8A8E]">
-              <MapPin className="h-3.5 w-3.5" strokeWidth={1.5} aria-hidden="true" />
+              <MapPin className="h-3.5 w-3.5" strokeWidth={1.5} />
               {profile.location}
             </div>
           </motion.div>

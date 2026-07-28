@@ -10,13 +10,11 @@ const FADE = 1.2;
 const CATEGORIES = [
   "Academic Research",
   "Professional",
-  "Certifications in Progress",
 ] as const;
 
 const CATEGORY_ACCENT: Record<string, string> = {
   "Academic Research": "#0A84FF",
   Professional: "#FF9F0A",
-  "Certifications in Progress": "#32D74B",
 };
 
 export default function ProjectsClient() {
@@ -62,8 +60,8 @@ export default function ProjectsClient() {
             animate={{ opacity: 1 }}
             transition={{ duration: FADE, delay: 1, ease: "easeOut" }}
           >
-            A selection of academic, professional, and personal projects that
-            reflect my interdisciplinary approach.
+            Documented academic and professional work across quantitative
+            research, engineering, and customer technology.
           </motion.p>
         </div>
       </section>
