@@ -1,137 +1,233 @@
 export const profile = {
   name: "Begench Garahanov",
   nameKana: "がらはのふ べげんち",
-  birth: "October 19, 1994",
-  location: "Shinjuku-ku, Tokyo, Japan",
+  location: "Tokyo, Japan",
   avatar: "/images/Garahanov.jpeg",
-  roles: ["Researcher", "Engineer", "Leader"],
-  tagline: "Bridging engineering, econometrics, and global leadership.",
+  roles: ["Technical Expert", "Quantitative Research", "Multilingual"],
+  tagline:
+    "Combining customer technology experience with quantitative policy research and an engineering foundation.",
   currentRole: "Technical Expert at Apple Japan",
-  currentStudy: "MA Candidate, Policy Science — Waseda University",
-  bio: "Master's candidate at Waseda University Graduate School of Social Sciences, specializing in Policy Science. Applied Chemistry engineer turned policy scientist, currently working as a Technical Expert at Apple Japan. My mission is to bridge engineering, econometrics, and global leadership to solve complex business and policy challenges.",
+  currentStudy: "Master’s graduate in Policy Sciences — Waseda University",
+  bio: "Tokyo-based Technical Expert at Apple Japan and a Waseda University master’s graduate in Policy Sciences. My background spans customer technology, applied chemistry, econometrics, and international relations.",
   longBio: [
-    "I bring together a rare combination of skills: an engineering foundation from Tokai University's Department of Applied Chemistry, quantitative modeling expertise from Waseda University's graduate program, and hands-on international leadership experience from both ETUT National University and Apple Japan. I am currently pursuing CFA Level I certification to further integrate financial analysis into my toolkit.",
-    "My academic work focuses on large-scale data analysis using Python and Stata for mathematical modeling and policy prediction. At Apple Japan, I lead team performance analysis and mentoring in a multilingual, multicultural environment — identifying challenges from concrete data and driving processes that maximize outcomes.",
+    "I work as a Technical Expert at Apple Japan, where I troubleshoot hardware and software issues, explain repair options clearly, and help customers reach practical resolutions. The role has strengthened my technical judgment, communication, and ability to work calmly in a fast-paced environment.",
+    "At Waseda University, I completed a master’s degree in Policy Sciences. My thesis used a balanced panel of 15 natural-gas-exporting countries from 2003 to 2023 to examine how export-market diversification and institutional quality relate to economic volatility.",
+    "Earlier, I earned a Bachelor of Engineering in Applied Chemistry and worked in international relations at ETUT National University. I bring this technical, analytical, and cross-cultural foundation to work involving operations, customer experience, and international programs.",
   ],
   coreStrengths: [
-    { label: "Quantitative Analysis", text: "Econometric modeling, large-scale data analysis, policy prediction" },
-    { label: "Engineering Background", text: "Applied Chemistry, energy systems foundation" },
-    { label: "Global Leadership", text: "Multilingual team management, cross-cultural communication, mentoring" },
-    { label: "Technical Skills", text: "Python, Stata, data-driven strategy formulation" },
-    { label: "Languages", text: "Japanese (N1), English (TOEIC 960 / TOEFL iBT 113), Russian (Proficiency Level 1)" },
+    {
+      label: "Customer Technology",
+      text: "Technical troubleshooting, repair guidance, and clear customer communication",
+    },
+    {
+      label: "Quantitative Research",
+      text: "Panel-data analysis, fixed-effects models, and robust statistical inference",
+    },
+    {
+      label: "Engineering Foundation",
+      text: "Applied chemistry, process systems, and structured problem-solving",
+    },
+    {
+      label: "Cross-cultural Work",
+      text: "Experience across technical, academic, and international environments",
+    },
+    {
+      label: "Languages",
+      text: "Japanese (JLPT N1), English (TOEIC 960; TOEFL iBT 113), and Russian",
+    },
   ],
   contact: {
-    emailAcademic: "garahanov@fuji.waseda.jp",
-    emailPersonal: "begakng@gmail.com",
+    email: "begakng@gmail.com",
     github: "https://github.com/garahan",
-    twitter: "https://twitter.com/bega_garahan",
     linkedin: "https://www.linkedin.com/in/bgarahanov",
   },
 };
 
 export const education = [
-  { year: "2016.10", event: "Enrolled at Hallym Japanese Language Institute" },
-  { year: "2017.03", event: "Graduated from Hallym Japanese Language Institute" },
-  { year: "2017.04", event: "Enrolled at Tokai University, Japanese Language Research Department" },
-  { year: "2018.03", event: "Graduated from Tokai University, Japanese Language Research Department" },
-  { year: "2018.04", event: "Enrolled at Tokai University, Faculty of Engineering, Department of Applied Chemistry" },
-  { year: "2022.03", event: "Graduated from Tokai University, Department of Applied Chemistry (BEng)" },
-  { year: "2022.04", event: "Research Student, Sophia University, Graduate School of Global Studies" },
-  { year: "2023.09", event: "MEXT Research Student, Waseda University, Graduate School of International Communication" },
-  { year: "2024.04", event: "Enrolled at Waseda University, Graduate School of Social Sciences, Policy Science (MA)" },
-  { year: "2026.03", event: "Expected graduation, Waseda University, MA in Policy Science" },
+  {
+    year: "2016.10–2017.03",
+    event: "Japanese-language study, Hallym Japanese Language Institute",
+  },
+  {
+    year: "2017.04–2018.03",
+    event: "Japanese-language preparatory program, Tokai University",
+  },
+  {
+    year: "2018.04–2022.03",
+    event: "Bachelor of Engineering in Applied Chemistry, Tokai University",
+  },
+  {
+    year: "2022",
+    event: "Research Student, Graduate School of Global Studies, Sophia University",
+  },
+  {
+    year: "2023.09–2024.03",
+    event: "MEXT Research Student, Waseda University",
+  },
+  {
+    year: "2024.04–2026.03",
+    event:
+      "Master’s degree in Policy Sciences, Graduate School of Social Sciences, Waseda University",
+  },
 ];
 
 export const experience = [
-  { period: "2022.06 – 2023.09", role: "International Relations Officer", org: "ETUT National University" },
-  { period: "2024.06 – Present", role: "Technical Expert", org: "Apple Japan, LLC" },
+  {
+    period: "2022.06–2023.09",
+    role: "International Relations Officer",
+    org: "ETUT National University",
+  },
+  {
+    period: "2024.06–Present",
+    role: "Technical Expert",
+    org: "Apple Japan",
+  },
 ];
 
 export const awards = [
-  { title: "Kawasaki Heavy Industries Scholarship", detail: "Recipient (2016–2022)" },
-  { title: "MEXT (Monbukagakusho) Scholarship", detail: "Recipient" },
-  { title: "Best Presentation Award", detail: "Int'l Scientific-Practical Conference on Sustainable Development Goals, Oguz Han E&T University, 2023" },
-  { title: "Tokyo Marathon 2024", detail: "Finisher & runner" },
-  { title: "Student International Football Club", detail: "Team Captain" },
+  {
+    title: "Kawasaki Heavy Industries Scholarship",
+    detail: "Recipient, 2016–2022",
+  },
+  {
+    title: "MEXT (Monbukagakusho) Scholarship",
+    detail: "Recipient, 2023–2026",
+  },
+  {
+    title: "Best Presentation Award",
+    detail:
+      "International Scientific-Practical Conference on Sustainable Development Goals, 2023",
+  },
+  { title: "Tokyo Marathon 2024", detail: "Finisher" },
+  {
+    title: "International Student Football Club",
+    detail: "Team captain, 2016–2022",
+  },
 ];
 
 export const qualifications = [
   { year: "2020", month: "06", name: "TOEIC", score: "960" },
   { year: "2021", month: "07", name: "TOEFL iBT", score: "113" },
-  { year: "2021", month: "12", name: "Japanese Language Proficiency Test (JLPT)", score: "N1" },
-  { year: "2022", month: "03", name: "Russian Language Proficiency Test", score: "Level 1" },
-  { year: "2023", month: "10", name: "Driver's License", score: "Acquired" },
+  {
+    year: "2021",
+    month: "12",
+    name: "Japanese Language Proficiency Test",
+    score: "N1",
+  },
+  {
+    year: "2022",
+    month: "03",
+    name: "Russian Language Proficiency Examination",
+    score: "Grade 1",
+  },
+  {
+    year: "2023",
+    month: "10",
+    name: "Japanese driver’s license",
+    score: "Acquired",
+  },
 ];
 
-export const personalStatement = "I pursue data-driven strategy formulation by fusing engineering systems thinking with the econometric analytical skills honed in my master's program. During my undergraduate studies, I built a foundation in energy systems. At Waseda University's graduate program, I focused on mathematical modeling for policy prediction using large-scale data with Python and Stata.";
+export const personalStatement =
+  "My work connects structured technical problem-solving with quantitative policy research. At Waseda University, I studied how export-market diversification and institutional quality relate to economic volatility in natural-gas-exporting countries. I now apply the same habits of careful diagnosis, clear communication, and evidence-based judgment in customer technology at Apple Japan.";
 
 export const projects = [
   {
     category: "Academic Research",
-    title: "Policy Prediction Using Large-Scale Data",
-    meta: "Waseda University · 2024–2026 · Python, Stata",
-    description: "Master's thesis project applying econometric modeling to policy prediction. Uses large-scale administrative data to forecast outcomes of policy interventions, combining traditional regression methods with machine learning techniques for variable selection and non-linear modeling.",
-    tags: ["Econometrics", "Policy Science", "Machine Learning", "Python", "Stata"],
+    title:
+      "Export Market Diversification and Economic Volatility in Natural Gas-Exporting Countries",
+    meta: "Waseda University · Master’s thesis · 2026 · Stata",
+    description:
+      "Examined a balanced panel of 15 natural-gas-exporting countries from 2003 to 2023. The study used fixed-effects regressions, interaction models, diagnostic tests, and Driscoll–Kraay standard errors to assess how export-market diversification and government effectiveness relate to economic volatility.",
+    tags: [
+      "Panel Data",
+      "Econometrics",
+      "Energy Economics",
+      "Stata",
+      "Policy Research",
+    ],
   },
   {
     category: "Academic Research",
     title: "Digital Twin Modeling of Syngas-to-Methanol Conversion",
-    meta: "Oguz Han Engineering and Technology University · 2023 · UniSim® Design Suite",
-    description: "Developed a digital twin of a chemical methanol production process. Created static and dynamic models of synthesis gas production, designed an automated control system, and built a unified technological line in virtual space. Awarded Best Presentation at the International Scientific-Practical Conference on Sustainable Development Goals.",
-    tags: ["Digital Twins", "Process Simulation", "Applied Chemistry", "UniSim", "Energy Systems"],
-  },
-  {
-    category: "Academic Research",
-    title: "Applied Chemistry Foundation",
-    meta: "Tokai University · 2018–2022 · Applied Chemistry",
-    description: "Four-year undergraduate study in applied chemistry building foundations in thermodynamics, reaction engineering, and material science. This engineering foundation directly informs my current approach to energy policy analysis and quantitative modeling.",
-    tags: ["Applied Chemistry", "Energy", "Thermodynamics", "Reaction Engineering"],
-  },
-  {
-    category: "Professional",
-    title: "Team Performance Analytics at Apple Japan",
-    meta: "Apple Japan, LLC · 2024–Present",
-    description: "Leading data-driven team performance analysis and mentoring initiatives in a multilingual, multicultural retail environment. Identifying operational bottlenecks from quantitative metrics and designing process improvements that maximize team outcomes.",
-    tags: ["Data Analysis", "Team Leadership", "Cross-cultural", "Mentoring"],
+    meta: "ETUT National University · Conference paper · 2023 · UniSim",
+    description:
+      "Modeled a syngas-to-methanol production process using Honeywell UniSim Design Suite, including static and dynamic process models and an automated control system. The work received a Best Presentation Award at an international scientific-practical conference.",
+    tags: [
+      "Digital Twin",
+      "Process Simulation",
+      "Applied Chemistry",
+      "UniSim",
+    ],
   },
   {
     category: "Professional",
-    title: "International Relations at ETUT National University",
+    title: "Technical Troubleshooting and Customer Support",
+    meta: "Apple Japan · 2024–Present",
+    description:
+      "Troubleshoot and diagnose selected Apple hardware and software issues, explain technical findings and repair options clearly, and share product and service knowledge with customers and colleagues.",
+    tags: [
+      "Technical Support",
+      "Troubleshooting",
+      "Customer Experience",
+      "Knowledge Sharing",
+    ],
+  },
+  {
+    category: "Professional",
+    title: "International Relations Administration",
     meta: "ETUT National University · 2022–2023",
-    description: "Served as International Relations Officer, managing cross-border academic partnerships and facilitating communication between international students and university administration. Gained firsthand experience in institutional policy implementation.",
-    tags: ["International Relations", "Policy", "Administration"],
-  },
-  {
-    category: "Certifications in Progress",
-    title: "CFA Level I Preparation",
-    meta: "Self-study · 2025–Present",
-    description: "Advancing toward CFA Level I certification to integrate financial analysis skills with my econometric and engineering toolkit. Focus on quantitative methods, economics, financial reporting, and corporate finance.",
-    tags: ["Finance", "CFA", "Quantitative Analysis"],
+    description:
+      "Supported international-relations administration and cross-cultural coordination in a national-university environment.",
+    tags: [
+      "International Relations",
+      "Administration",
+      "Cross-cultural Communication",
+    ],
   },
 ];
 
 export const publications = [
   {
-    type: "Journal Article",
+    type: "Conference Proceedings Paper",
     title: "Modeling the Conversion Process of Syngas to Methanol Production",
     author: "Begench Charyyevich Garahanov",
-    venue: "Proceedings of International Scientific-Practical Conference «Sustainable Development Goals: Youth Policy and Innovative Technologies», February 15–16, 2023, Oguz Han Engineering and Technology University of Turkmenistan, Ashgabat",
-    abstract: "Developed a digital twin of a chemical methanol production process using Honeywell's UniSim® Design Suite. Created static and dynamic models of synthesis gas production processes, designed an automated control system, and built a unified technological line in virtual space. The virtual simulator enables personnel to master production processes without risk to equipment or safety.",
+    venue:
+      "Proceedings of the International Scientific-Practical Conference “Sustainable Development Goals: Youth Policy and Innovative Technologies,” February 15–16, 2023",
+    abstract:
+      "A process-modeling study of syngas-to-methanol production using Honeywell UniSim Design Suite, including static and dynamic models and an automated control system.",
     doi: "https://doi.org/10.5281/zenodo.7776863",
-  },
-  {
-    type: "Conference Presentation",
-    title: "Best Presentation Award — International Scientific-Practical Conference",
-    author: "Begench Charyyevich Garahanov",
-    venue: "Sustainable Development Goals: Youth Policy and Innovative Technologies, February 2023, Oguz Han Engineering and Technology University of Turkmenistan",
-    abstract: "Awarded the Best Presentation Prize for outstanding research presentation on digital twin modeling of syngas-to-methanol conversion processes.",
-    doi: null,
   },
 ];
 
+export const thesis = {
+  title:
+    "The Impact of Export Market Diversification on Economic Volatility in Natural Gas-Exporting Countries: A Panel Data Analysis",
+  institution:
+    "Graduate School of Social Sciences, Waseda University · Policy Sciences · January 2026",
+  summary:
+    "A balanced-panel study of 15 natural-gas-exporting countries from 2003 to 2023. The analysis combines UN Comtrade trade data, World Bank development and governance indicators, and international gas-price data.",
+  method:
+    "Fixed-effects panel regressions, interaction models, diagnostic testing, and Driscoll–Kraay robust standard errors.",
+  finding:
+    "Greater export-market diversification was associated with lower economic volatility, with the relationship strongest where institutional capacity was weaker.",
+};
+
 export const researchInterests = [
-  { title: "Mathematical Modeling for Policy Prediction", text: "Using large-scale data with Python and Stata to model and forecast policy outcomes" },
-  { title: "Digital Twins & Process Simulation", text: "Creating virtual models of industrial chemical processes for training and optimization" },
-  { title: "Energy Systems Analysis", text: "Building on an Applied Chemistry foundation to analyze energy policy and sustainability" },
-  { title: "Quantitative Methods in Social Science", text: "Applying econometric techniques to social and economic policy questions" },
+  {
+    title: "Trade Diversification & Economic Resilience",
+    text: "How export-market structure relates to macroeconomic volatility in resource-exporting economies",
+  },
+  {
+    title: "Energy Economics",
+    text: "The economic and policy dimensions of natural gas, commodity exposure, and structural resilience",
+  },
+  {
+    title: "Panel-data Econometrics",
+    text: "Fixed-effects estimation, robust inference, interaction models, and diagnostic testing",
+  },
+  {
+    title: "Process Systems",
+    text: "Applying an engineering foundation to industrial process modeling and operational problem-solving",
+  },
 ];

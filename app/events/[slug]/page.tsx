@@ -1,4 +1,6 @@
 import { notFound } from "next/navigation";
+import { remark } from "remark";
+import remarkHtml from "remark-html";
 import { getAllEvents, getEventBySlug } from "@/lib/events";
 import EventDetailClient from "./event-detail-client";
 
@@ -28,5 +30,10 @@ export default async function EventDetailPage({
   const { slug } = await params;
   const event = getEventBySlug(slug);
   if (!event) notFound();
-  return <EventDetailClient event={event} />;
+  const renderedContent = String(
+    await remark().use(remarkHtml).process(event.content),
+  );
+  return (
+    <EventDetailClient event={event} renderedContent={renderedContent} />
+  );
 }

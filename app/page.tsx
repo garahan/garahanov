@@ -87,11 +87,12 @@ export default function HomePage() {
             animate={{ opacity: 1 }}
             transition={{ duration: FADE, delay: 1, ease: "easeOut" }}
           >
-            <span className="text-[#F5F5F0]">Researcher</span>
-            <span className="text-[#48484a]">·</span>
-            <span className="text-[#F5F5F0]">Engineer</span>
-            <span className="text-[#48484a]">·</span>
-            <span className="text-[#F5F5F0]">Leader</span>
+            {profile.roles.map((role, index) => (
+              <span key={role} className="contents">
+                {index > 0 && <span className="text-[#48484a]">·</span>}
+                <span className="text-[#F5F5F0]">{role}</span>
+              </span>
+            ))}
           </motion.div>
 
           {/* Tagline */}
@@ -101,8 +102,7 @@ export default function HomePage() {
             animate={{ opacity: 1 }}
             transition={{ duration: FADE, delay: 1.3, ease: "easeOut" }}
           >
-            {profile.tagline} Applied Chemistry engineer turned policy scientist,
-            currently at Apple Japan and Waseda University.
+            {profile.tagline}
           </motion.p>
 
           {/* Current status */}
@@ -174,7 +174,7 @@ export default function HomePage() {
               Selected Work
             </p>
             <h2 className="mt-3 text-2xl font-light tracking-tight text-[#F5F5F0] sm:text-3xl">
-              Three things I'm building right now.
+              Selected work across research and practice.
             </h2>
           </motion.div>
 

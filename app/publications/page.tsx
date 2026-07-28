@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import SiteNav from "@/components/SiteNav";
 import Footer from "@/components/Footer";
-import { publications, researchInterests } from "@/lib/content";
+import { publications, researchInterests, thesis } from "@/lib/content";
 
 const FADE = 1.2;
 
@@ -66,8 +66,8 @@ export default function PublicationsPage() {
             animate={{ opacity: 1 }}
             transition={{ duration: FADE, delay: 1, ease: "easeOut" }}
           >
-            Peer-reviewed work and conference presentations spanning process
-            simulation, energy systems, and policy science.
+            Documented research spanning energy economics, panel-data analysis,
+            and process simulation.
           </motion.p>
         </div>
       </section>
@@ -180,7 +180,7 @@ export default function PublicationsPage() {
         </div>
       </section>
 
-      {/* Works in progress */}
+      {/* Master's thesis */}
       <section className="qg-pl-safe qg-pr-safe px-4 py-24 sm:px-6">
         <div className="mx-auto max-w-5xl">
           <motion.div
@@ -190,10 +190,10 @@ export default function PublicationsPage() {
             transition={{ duration: FADE, ease: "easeOut" }}
           >
             <p className="text-[11px] uppercase tracking-[0.4em] text-[#8A8A8E]">
-              Ongoing
+              Master&apos;s Thesis
             </p>
             <h2 className="mt-3 text-2xl font-light tracking-tight text-[#F5F5F0] sm:text-3xl">
-              Works in progress.
+              Completed research.
             </h2>
           </motion.div>
 
@@ -207,18 +207,23 @@ export default function PublicationsPage() {
             <div className="flex items-center gap-3">
               <span className="h-2 w-2 flex-none rounded-full bg-[#32D74B]" />
               <span className="text-[10px] uppercase tracking-[0.3em] text-[#32D74B]/80">
-                In Progress
+                Completed 2026
               </span>
             </div>
             <h3 className="mt-3 text-xl font-light leading-snug text-[#F5F5F0] sm:text-2xl">
-              Master&apos;s Thesis — Policy Science
+              {thesis.title}
             </h3>
             <p className="mt-3 text-sm leading-relaxed text-[#8A8A8E]">
-              Currently researching mathematical modeling for policy prediction
-              using large-scale data at Waseda University&apos;s Graduate School
-              of Social Sciences. The thesis applies econometric and machine
-              learning techniques to forecast outcomes of policy interventions,
-              with expected completion in March 2026.
+              {thesis.institution}
+            </p>
+            <p className="mt-3 text-sm leading-relaxed text-[#8A8A8E]">
+              {thesis.summary}
+            </p>
+            <p className="mt-3 text-sm leading-relaxed text-[#8A8A8E]">
+              <span className="text-[#F5F5F0]">Method:</span> {thesis.method}
+            </p>
+            <p className="mt-3 text-sm leading-relaxed text-[#8A8A8E]">
+              <span className="text-[#F5F5F0]">Finding:</span> {thesis.finding}
             </p>
           </motion.div>
         </div>

@@ -15,11 +15,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://garahanov.vercel.app"),
   title: {
-    default: "Begench Garahanov — Researcher · Engineer · Leader",
+    default: "Begench Garahanov — Technical Expert · Quantitative Research",
     template: "%s — Begench Garahanov",
   },
   description:
-    "Personal website of Begench Garahanov — researcher, engineer, and writer based in Tokyo, Japan. Bridging engineering, econometrics, and global leadership.",
+    "Begench Garahanov is a Tokyo-based Technical Expert at Apple Japan and a Waseda University master’s graduate in Policy Sciences.",
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
@@ -32,8 +32,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Begench Garahanov",
-    description: "Researcher · Engineer · Leader — based in Tokyo, Japan.",
-    images: ["/images/Garahanov.jpeg"],
+    description:
+      "Technical Expert · Quantitative Research · Multilingual — based in Tokyo, Japan.",
     url: "https://garahanov.vercel.app",
   },
 };
@@ -44,8 +44,6 @@ export const viewport: Viewport = {
   viewportFit: "cover",
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
 };
 
 export default function RootLayout({

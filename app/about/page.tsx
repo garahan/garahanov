@@ -334,33 +334,18 @@ export default function AboutPage() {
             transition={{ duration: FADE, delay: 0.15, ease: "easeOut" }}
             className="mt-10 flex flex-col gap-4"
           >
-            {/* Emails */}
             <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
               <a
-                href={`mailto:${profile.contact.emailAcademic}`}
+                href={`mailto:${profile.contact.email}`}
                 className="qg-tap group flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-5 py-4 backdrop-blur-2xl transition-colors duration-500 hover:border-white/20 hover:bg-white/[0.07]"
               >
                 <Mail className="h-4 w-4 flex-none text-[#0A84FF]" strokeWidth={1.5} />
                 <div className="flex flex-col">
                   <span className="text-[10px] uppercase tracking-[0.3em] text-[#8A8A8E]">
-                    Academic
+                    Email
                   </span>
                   <span className="text-sm font-light text-[#F5F5F0]">
-                    {profile.contact.emailAcademic}
-                  </span>
-                </div>
-              </a>
-              <a
-                href={`mailto:${profile.contact.emailPersonal}`}
-                className="qg-tap group flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-5 py-4 backdrop-blur-2xl transition-colors duration-500 hover:border-white/20 hover:bg-white/[0.07]"
-              >
-                <Mail className="h-4 w-4 flex-none text-[#0A84FF]" strokeWidth={1.5} />
-                <div className="flex flex-col">
-                  <span className="text-[10px] uppercase tracking-[0.3em] text-[#8A8A8E]">
-                    Personal
-                  </span>
-                  <span className="text-sm font-light text-[#F5F5F0]">
-                    {profile.contact.emailPersonal}
+                    {profile.contact.email}
                   </span>
                 </div>
               </a>
@@ -381,22 +366,6 @@ export default function AboutPage() {
                   </span>
                   <span className="text-sm font-light text-[#F5F5F0]">
                     @garahan
-                  </span>
-                </div>
-              </a>
-              <a
-                href={profile.contact.twitter}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="qg-tap group flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-5 py-4 backdrop-blur-2xl transition-colors duration-500 hover:border-white/20 hover:bg-white/[0.07]"
-              >
-                <ExternalLink className="h-4 w-4 flex-none text-[#0A84FF]" strokeWidth={1.5} />
-                <div className="flex flex-col">
-                  <span className="text-[10px] uppercase tracking-[0.3em] text-[#8A8A8E]">
-                    Twitter / X
-                  </span>
-                  <span className="text-sm font-light text-[#F5F5F0]">
-                    @bega_garahan
                   </span>
                 </div>
               </a>

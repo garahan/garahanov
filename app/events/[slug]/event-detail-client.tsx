@@ -3,9 +3,6 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowLeft, Calendar, MapPin } from "lucide-react";
-import { remark } from "remark";
-import remarkHtml from "remark-html";
-import { useEffect, useState } from "react";
 import SiteNav from "@/components/SiteNav";
 import Footer from "@/components/Footer";
 import type { EventPost } from "@/lib/events";
@@ -29,17 +26,13 @@ function formatDate(iso: string): string {
   });
 }
 
-export default function EventDetailClient({ event }: { event: EventPost }) {
-  const [html, setHtml] = useState<string>("");
-
-  useEffect(() => {
-    remark()
-      .use(remarkHtml)
-      .process(event.content)
-      .then((file) => setHtml(String(file)))
-      .catch(console.error);
-  }, [event.content]);
-
+export default function EventDetailClient({
+  event,
+  renderedContent,
+}: {
+  event: EventPost;
+  renderedContent: string;
+}) {
   const accent = CATEGORY_COLORS[event.category] ?? "#8A8A8E";
 
   return (
@@ -121,7 +114,7 @@ export default function EventDetailClient({ event }: { event: EventPost }) {
         >
           <div
             className="prose-qg"
-            dangerouslySetInnerHTML={{ __html: html }}
+            dangerouslySetInnerHTML={{ __html: renderedContent }}
           />
 
           {/* Tags */}

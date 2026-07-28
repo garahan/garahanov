@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Calendar, Award } from "lucide-react";
+import { MapPin, GraduationCap, Award } from "lucide-react";
 import SiteNav from "@/components/SiteNav";
 import Footer from "@/components/Footer";
 import {
@@ -68,8 +68,8 @@ export default function CVPage() {
             transition={{ duration: FADE, delay: 1, ease: "easeOut" }}
           >
             <span className="flex items-center gap-2 text-xs text-[#8A8A8E]">
-              <Calendar className="h-3.5 w-3.5 text-[#0A84FF]" strokeWidth={1.5} />
-              <span className="tabular-nums">b. {profile.birth}</span>
+              <GraduationCap className="h-3.5 w-3.5 text-[#0A84FF]" strokeWidth={1.5} />
+              <span>Waseda University master’s graduate</span>
             </span>
             <span className="flex items-center gap-2 text-xs text-[#8A8A8E]">
               <MapPin className="h-3.5 w-3.5 text-[#FF9F0A]" strokeWidth={1.5} />
