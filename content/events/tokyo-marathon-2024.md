@@ -5,7 +5,6 @@ location: "Tokyo, Japan"
 category: "personal"
 tags: ["tokyo-marathon", "running", "personal", "motivation"]
 excerpt: "In 2024 I ran the Tokyo Marathon. Here's what the experience taught me about goal-setting, persistence, and the power of incremental progress."
-image: "/events/tokyo-marathon.jpg"
 ---
 
 On a cold February morning in 2024, I stood at the starting line of the Tokyo Marathon with 38,000 other runners. I had trained for months, but nothing prepares you for the moment when the crowd surges forward and 42.195 kilometers stretches out ahead of you.
