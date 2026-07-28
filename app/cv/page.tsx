@@ -21,7 +21,7 @@ export default function CVPage() {
       <SiteNav />
 
       {/* Page header */}
-      <section className="qg-pl-safe qg-pr-safe relative flex min-h-dvh flex-col justify-center px-4 pt-24 sm:px-6">
+      <section className="qg-pl-safe qg-pr-safe relative flex min-h-[70dvh] flex-col justify-center px-4 pb-12 pt-28 sm:px-6">
         {/* Ambient glow */}
         <motion.div
           className="pointer-events-none absolute inset-0"

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import {
   Mail,
   ExternalLink,
@@ -27,7 +28,7 @@ export default function AboutPage() {
       <SiteNav />
 
       {/* Hero */}
-      <section className="qg-pl-safe qg-pr-safe relative flex min-h-dvh flex-col justify-center px-4 pt-24 sm:px-6">
+      <section className="qg-pl-safe qg-pr-safe relative flex min-h-[74dvh] flex-col justify-center px-4 pb-12 pt-28 sm:px-6">
         {/* Ambient glow */}
         <motion.div
           className="pointer-events-none absolute inset-0"
@@ -49,10 +50,12 @@ export default function AboutPage() {
               className="flex-none"
             >
               <div className="rounded-full border border-white/10 bg-white/5 p-1.5 backdrop-blur-2xl">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                   src={profile.avatar}
                   alt={profile.name}
+                  width={128}
+                  height={128}
+                  priority
                   className="h-28 w-28 rounded-full object-cover sm:h-32 sm:w-32"
                 />
               </div>
