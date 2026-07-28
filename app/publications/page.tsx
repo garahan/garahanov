@@ -131,7 +131,7 @@ export default function PublicationsPage() {
                       className="mt-4 inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.2em] text-[#0A84FF] transition-colors duration-500 hover:text-[#F5F5F0]"
                     >
                       DOI
-                      <ExternalLink className="h-3.5 w-3.5" strokeWidth={1.5} />
+                      <ExternalLink className="h-3.5 w-3.5" strokeWidth={1.5} aria-hidden="true" />
                     </a>
                   )}
                 </motion.article>

@@ -46,6 +46,40 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Begench Garahanov",
+  alternateName: "がらはのふ べげんち",
+  url: "https://garahanov.vercel.app",
+  image: "https://garahanov.vercel.app/images/Garahanov.jpeg",
+  jobTitle: "Technical Expert",
+  worksFor: { "@type": "Organization", name: "Apple Japan, LLC" },
+  alumniOf: [
+    { "@type": "CollegeOrUniversity", name: "Tokai University" },
+    { "@type": "CollegeOrUniversity", name: "Waseda University" },
+  ],
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Shinjuku-ku",
+    addressRegion: "Tokyo",
+    addressCountry: "JP",
+  },
+  knowsLanguage: ["Japanese", "English", "Russian", "Turkmen"],
+  knowsAbout: [
+    "Policy Science",
+    "Econometrics",
+    "Applied Chemistry",
+    "Data Analysis",
+    "Energy Systems",
+  ],
+  sameAs: [
+    "https://github.com/garahan",
+    "https://twitter.com/bega_garahan",
+    "https://www.linkedin.com/in/bgarahanov",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -55,7 +89,17 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-dvh bg-[#050505] text-[#F5F5F0] antialiased">
-        {children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:border focus:border-white/20 focus:bg-[#0B0C10] focus:px-5 focus:py-3 focus:text-xs focus:uppercase focus:tracking-[0.3em] focus:text-[#F5F5F0]"
+        >
+          Skip to content
+        </a>
+        <div id="main">{children}</div>
       </body>
     </html>
   );

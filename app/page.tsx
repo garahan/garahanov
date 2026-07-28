@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, MapPin, Briefcase, GraduationCap } from "lucide-react";
 import SiteNav from "@/components/SiteNav";
 import Footer from "@/components/Footer";
+import Starfield from "@/components/Starfield";
 import { profile, projects, publications } from "@/lib/content";
 
 const FADE = 1.2;
@@ -39,7 +40,10 @@ export default function HomePage() {
       <SiteNav />
 
       {/* Hero */}
-      <section className="qg-pl-safe qg-pr-safe relative flex min-h-dvh flex-col justify-center px-4 pt-24 sm:px-6">
+      <section className="qg-pl-safe qg-pr-safe relative flex min-h-dvh flex-col justify-center overflow-hidden px-4 pt-24 sm:px-6">
+        {/* Quiet starfield — the observatory signature */}
+        <Starfield />
+
         {/* Ambient glow */}
         <motion.div
           className="pointer-events-none absolute inset-0"
@@ -49,6 +53,7 @@ export default function HomePage() {
           }}
           animate={{ opacity: [0.5, 0.8, 0.5] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          aria-hidden="true"
         />
 
         <div className="relative mx-auto w-full max-w-5xl">
@@ -60,7 +65,7 @@ export default function HomePage() {
             transition={{ duration: FADE, delay: 0.3, ease: "easeOut" }}
           >
             <span className="flex items-center gap-1.5">
-              <MapPin className="h-3 w-3" strokeWidth={1.5} />
+              <MapPin className="h-3 w-3" strokeWidth={1.5} aria-hidden="true" />
               Tokyo, Japan
             </span>
             <span className="font-mono tabular-nums">
@@ -113,11 +118,11 @@ export default function HomePage() {
             transition={{ duration: FADE, delay: 1.6, ease: "easeOut" }}
           >
             <span className="flex items-center gap-2 text-xs text-[#8A8A8E]">
-              <Briefcase className="h-3.5 w-3.5 text-[#0A84FF]" strokeWidth={1.5} />
+              <Briefcase className="h-3.5 w-3.5 text-[#0A84FF]" strokeWidth={1.5} aria-hidden="true" />
               {profile.currentRole}
             </span>
             <span className="flex items-center gap-2 text-xs text-[#8A8A8E]">
-              <GraduationCap className="h-3.5 w-3.5 text-[#FF9F0A]" strokeWidth={1.5} />
+              <GraduationCap className="h-3.5 w-3.5 text-[#FF9F0A]" strokeWidth={1.5} aria-hidden="true" />
               {profile.currentStudy}
             </span>
           </motion.div>
@@ -136,8 +141,7 @@ export default function HomePage() {
               About me
               <ArrowRight
                 className="h-3.5 w-3.5 transition-transform duration-500 group-hover:translate-x-1"
-                strokeWidth={1.5}
-              />
+                strokeWidth={1.5} aria-hidden="true" />
             </Link>
             <Link
               href="/events"
@@ -204,8 +208,7 @@ export default function HomePage() {
                   </div>
                   <ArrowRight
                     className="hidden h-4 w-4 flex-none text-[#8A8A8E] transition-all duration-500 group-hover:translate-x-1 group-hover:text-[#F5F5F0] sm:block"
-                    strokeWidth={1.5}
-                  />
+                    strokeWidth={1.5} aria-hidden="true" />
                 </Link>
               </motion.div>
             ))}
