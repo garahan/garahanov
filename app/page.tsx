@@ -7,6 +7,7 @@ import { ArrowRight, MapPin, Briefcase, GraduationCap } from "lucide-react";
 import SiteNav from "@/components/SiteNav";
 import Footer from "@/components/Footer";
 import Starfield from "@/components/Starfield";
+import DecisionConstellation from "@/components/DecisionConstellation";
 import { profile, projects, publications } from "@/lib/content";
 
 const FADE = 1.2;
@@ -39,130 +40,149 @@ export default function HomePage() {
     <>
       <SiteNav />
 
-      {/* Hero */}
-      <section className="qg-pl-safe qg-pr-safe relative flex min-h-dvh flex-col justify-center overflow-hidden px-4 pt-24 sm:px-6">
-        {/* Quiet starfield — the observatory signature */}
+      <section className="qg-pl-safe qg-pr-safe relative flex min-h-dvh flex-col justify-center overflow-hidden px-4 pb-12 pt-28 sm:px-6">
         <Starfield />
-
-        {/* Ambient glow */}
         <motion.div
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "radial-gradient(50% 40% at 50% 30%, rgba(10,132,255,0.05), transparent 70%)",
+              "radial-gradient(55% 60% at 78% 45%, rgba(10,132,255,0.07), transparent 70%)",
           }}
           animate={{ opacity: [0.5, 0.8, 0.5] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
           aria-hidden="true"
         />
 
-        <div className="relative mx-auto w-full max-w-5xl">
-          {/* Location + time */}
-          <motion.div
-            className="flex items-center gap-4 text-[10px] uppercase tracking-[0.35em] text-[#8A8A8E]"
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: FADE, delay: 0.3, ease: "easeOut" }}
-          >
-            <span className="flex items-center gap-1.5">
-              <MapPin className="h-3 w-3" strokeWidth={1.5} aria-hidden="true" />
-              Tokyo, Japan
-            </span>
-            <span className="font-mono tabular-nums">
-              {now ? formatTokyoTime(now) : "\u00A0"} JST
-            </span>
-          </motion.div>
-
-          {/* Name */}
-          <motion.h1
-            className="mt-6 text-5xl font-light leading-[1.05] tracking-tight text-[#F5F5F0] sm:text-7xl md:text-8xl"
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.5, delay: 0.5, ease: "easeOut" }}
-          >
-            Begench
-            <br />
-            <span className="text-[#8A8A8E]">Garahanov</span>
-          </motion.h1>
-
-          {/* Roles */}
-          <motion.div
-            className="mt-8 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm uppercase tracking-[0.25em] text-[#8A8A8E]"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: FADE, delay: 1, ease: "easeOut" }}
-          >
-            {profile.roles.map((role, index) => (
-              <span key={role} className="contents">
-                {index > 0 && <span className="text-[#48484a]">·</span>}
-                <span className="text-[#F5F5F0]">{role}</span>
+        <div className="relative mx-auto grid w-full max-w-6xl items-center gap-12 lg:grid-cols-2">
+          <div>
+            <motion.div
+              className="flex items-center gap-4 text-[10px] uppercase tracking-[0.32em] text-[#A1A1A6]"
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: FADE, delay: 0.2, ease: "easeOut" }}
+            >
+              <span className="flex items-center gap-1.5">
+                <MapPin className="h-3 w-3" strokeWidth={1.5} aria-hidden="true" />
+                Tokyo, Japan
               </span>
-            ))}
-          </motion.div>
+              <span className="font-mono tabular-nums">
+                {now ? formatTokyoTime(now) : "\u00A0"} JST
+              </span>
+            </motion.div>
 
-          {/* Tagline */}
-          <motion.p
-            className="mt-6 max-w-xl text-base leading-relaxed text-[#8A8A8E] sm:text-lg"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: FADE, delay: 1.3, ease: "easeOut" }}
-          >
-            {profile.tagline}
-          </motion.p>
-
-          {/* Current status */}
-          <motion.div
-            className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-6"
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: FADE, delay: 1.6, ease: "easeOut" }}
-          >
-            <span className="flex items-center gap-2 text-xs text-[#8A8A8E]">
-              <Briefcase className="h-3.5 w-3.5 text-[#0A84FF]" strokeWidth={1.5} aria-hidden="true" />
-              {profile.currentRole}
-            </span>
-            <span className="flex items-center gap-2 text-xs text-[#8A8A8E]">
-              <GraduationCap className="h-3.5 w-3.5 text-[#FF9F0A]" strokeWidth={1.5} aria-hidden="true" />
-              {profile.currentStudy}
-            </span>
-          </motion.div>
-
-          {/* CTAs */}
-          <motion.div
-            className="mt-12 flex flex-wrap items-center gap-3"
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: FADE, delay: 1.9, ease: "easeOut" }}
-          >
-            <Link
-              href="/about"
-              className="qg-tap group flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-xs uppercase tracking-[0.3em] text-[#F5F5F0] backdrop-blur-2xl transition-colors duration-500 hover:border-white/30 hover:bg-white/10 active:bg-white/15"
+            <motion.h1
+              className="mt-6 text-5xl font-light leading-[.98] tracking-[-0.045em] text-[#F5F5F0] sm:text-7xl lg:text-[5.5rem]"
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.3, delay: 0.4, ease: "easeOut" }}
             >
-              About me
-              <ArrowRight
-                className="h-3.5 w-3.5 transition-transform duration-500 group-hover:translate-x-1"
-                strokeWidth={1.5} aria-hidden="true" />
-            </Link>
-            <Link
-              href="/events"
-              className="qg-tap flex items-center gap-2 rounded-full border border-[#0A84FF]/30 bg-[#0A84FF]/10 px-6 py-3 text-xs uppercase tracking-[0.3em] text-[#F5F5F0] backdrop-blur-2xl transition-colors duration-500 hover:border-[#0A84FF]/60 hover:bg-[#0A84FF]/20 active:bg-[#0A84FF]/25"
+              Begench
+              <br />
+              <span className="text-[#77777D]">Garahanov</span>
+            </motion.h1>
+
+            <motion.p
+              className="mt-7 max-w-2xl text-lg font-light leading-relaxed text-[#D1D1D6] sm:text-xl"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: FADE, delay: 0.75, ease: "easeOut" }}
             >
-              Events & Journal
-            </Link>
+              I translate complex technical and quantitative evidence into
+              clear decisions, stronger operations, and better customer outcomes.
+            </motion.p>
+
+            <motion.div
+              className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-2 text-[10px] uppercase tracking-[0.24em]"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: FADE, delay: 1, ease: "easeOut" }}
+            >
+              {profile.roles.map((role, index) => (
+                <span key={role} className="contents">
+                  {index > 0 && <span className="text-[#48484A]">·</span>}
+                  <span className="text-[#A1A1A6]">{role}</span>
+                </span>
+              ))}
+            </motion.div>
+
+            <motion.div
+              className="mt-7 flex flex-col gap-2.5 sm:flex-row sm:gap-5"
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: FADE, delay: 1.2, ease: "easeOut" }}
+            >
+              <span className="flex items-center gap-2 text-xs text-[#A1A1A6]">
+                <Briefcase className="h-3.5 w-3.5 text-[#0A84FF]" strokeWidth={1.5} aria-hidden="true" />
+                {profile.currentRole}
+              </span>
+              <span className="flex items-center gap-2 text-xs text-[#A1A1A6]">
+                <GraduationCap className="h-3.5 w-3.5 text-[#FF9F0A]" strokeWidth={1.5} aria-hidden="true" />
+                {profile.currentStudy}
+              </span>
+            </motion.div>
+
+            <motion.div
+              className="mt-9 flex flex-wrap items-center gap-3"
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: FADE, delay: 1.4, ease: "easeOut" }}
+            >
+              <Link
+                href="/projects"
+                className="qg-tap group flex items-center gap-2 rounded-full bg-[#F5F5F0] px-6 py-3 text-[10px] font-medium uppercase tracking-[0.22em] text-black transition-transform duration-300 hover:-translate-y-0.5"
+              >
+                See selected work
+                <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+              </Link>
+              <Link
+                href="/about"
+                className="qg-tap flex items-center rounded-full border border-white/15 bg-white/[0.035] px-6 py-3 text-[10px] uppercase tracking-[0.22em] text-[#D1D1D6] backdrop-blur-xl transition-colors hover:border-white/30 hover:text-white"
+              >
+                View profile
+              </Link>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 1.55, ease: "easeOut" }}
+              className="mt-10 lg:hidden"
+            >
+              <DecisionConstellation />
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 18 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.2, delay: 0.75, ease: "easeOut" }}
+            className="hidden lg:block"
+          >
+            <DecisionConstellation />
           </motion.div>
         </div>
+      </section>
 
-        {/* Scroll hint */}
-        <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: [0, 0.5, 0] }}
-          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 3 }}
-        >
-          <span className="text-[10px] uppercase tracking-[0.4em] text-[#8A8A8E]">
-            scroll
-          </span>
-        </motion.div>
+      <section className="qg-pl-safe qg-pr-safe px-4 py-10 sm:px-6 sm:py-14">
+        <div className="mx-auto grid max-w-6xl overflow-hidden rounded-[2rem] border border-white/10 bg-[#08090C] sm:grid-cols-3">
+          {[
+            ["01", "Evidence", "Diagnose carefully", "#0A84FF"],
+            ["02", "Clarity", "Make complexity usable", "#F5F5F0"],
+            ["03", "Action", "Improve the outcome", "#FF9F0A"],
+          ].map(([number, title, text, color], index) => (
+            <motion.div
+              key={title}
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: index * 0.12 }}
+              className="border-b border-white/10 p-6 last:border-0 sm:border-b-0 sm:border-r sm:last:border-r-0"
+            >
+              <span className="font-mono text-[10px]" style={{ color }}>{number}</span>
+              <h2 className="mt-5 text-xl font-light text-[#F5F5F0]">{title}</h2>
+              <p className="mt-2 text-sm text-[#A1A1A6]">{text}</p>
+            </motion.div>
+          ))}
+        </div>
       </section>
 
       {/* Featured work */}

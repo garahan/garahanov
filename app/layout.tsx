@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     template: "%s — Begench Garahanov",
   },
   description:
-    "Begench Garahanov is a Tokyo-based Technical Expert at Apple Japan and a Waseda University master’s graduate in Policy Sciences.",
+    "Begench Garahanov translates complex technical and quantitative evidence into clear decisions, stronger operations, and better customer outcomes.",
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#050505",
+  themeColor: "#030304",
   colorScheme: "dark",
   viewportFit: "cover",
   width: "device-width",
@@ -54,18 +54,18 @@ const personJsonLd = {
   url: "https://garahanov.vercel.app",
   image: "https://garahanov.vercel.app/images/Garahanov.jpeg",
   jobTitle: "Technical Expert",
-  worksFor: { "@type": "Organization", name: "Apple Japan, LLC" },
+  worksFor: { "@type": "Organization", name: "Apple Japan" },
   alumniOf: [
     { "@type": "CollegeOrUniversity", name: "Tokai University" },
     { "@type": "CollegeOrUniversity", name: "Waseda University" },
   ],
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Shinjuku-ku",
+    addressLocality: "Tokyo",
     addressRegion: "Tokyo",
     addressCountry: "JP",
   },
-  knowsLanguage: ["Japanese", "English", "Russian", "Turkmen"],
+  knowsLanguage: ["Japanese", "English", "Russian", "Turkmen", "Turkish"],
   knowsAbout: [
     "Policy Science",
     "Econometrics",
@@ -75,7 +75,6 @@ const personJsonLd = {
   ],
   sameAs: [
     "https://github.com/garahan",
-    "https://twitter.com/bega_garahan",
     "https://www.linkedin.com/in/bgarahanov",
   ],
 };
@@ -95,7 +94,7 @@ export default function RootLayout({
         />
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:border focus:border-white/20 focus:bg-[#0B0C10] focus:px-5 focus:py-3 focus:text-xs focus:uppercase focus:tracking-[0.3em] focus:text-[#F5F5F0]"
+          className="skip-link"
         >
           Skip to content
         </a>

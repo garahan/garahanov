@@ -7,10 +7,10 @@ tags: ["career", "education", "research"]
 excerpt: "How an engineering foundation led to graduate research in policy science and a customer-technology role in Tokyo."
 ---
 
-My academic path began with Japanese-language study and a Bachelor of
-Engineering in Applied Chemistry at Tokai University. Engineering taught me to
-break complex systems into parts, test assumptions, and work methodically from
-evidence.
+My academic path began at Kanrin Japanese Language School in 2016. I later
+completed a Japanese-language preparatory program and a Bachelor of Engineering
+in Applied Chemistry at Tokai University. Engineering taught me to break complex
+systems into parts, test assumptions, and work methodically from evidence.
 
 After graduating in 2022, I expanded into international relations and policy
 research. I studied at Sophia University, worked in international relations at
