@@ -33,7 +33,7 @@ export const profile = {
     },
     {
       label: "Languages",
-      text: "Japanese (JLPT N1), English (TOEIC 960; TOEFL iBT 113), and Russian",
+      text: "Japanese (JLPT N1), English (TOEIC 960; TOEFL iBT 113), Russian, Turkmen, and Turkish",
     },
   ],
   contact: {
@@ -46,7 +46,7 @@ export const profile = {
 export const education = [
   {
     year: "2016.10–2017.03",
-    event: "Japanese-language study, Hallym Japanese Language Institute",
+    event: "Japanese-language study, Kanrin Japanese Language School",
   },
   {
     year: "2017.04–2018.03",

@@ -1,11 +1,11 @@
 {
   "name": "Begench Garahanov",
   "short_name": "Garahanov",
-  "description": "Researcher · Engineer · Leader — based in Tokyo, Japan.",
+  "description": "Technical Expert · Quantitative Research · Multilingual — based in Tokyo, Japan.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#050505",
-  "theme_color": "#050505",
+  "background_color": "#030304",
+  "theme_color": "#030304",
   "orientation": "portrait",
   "icons": [
     {

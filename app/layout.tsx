@@ -65,7 +65,7 @@ const personJsonLd = {
     addressRegion: "Tokyo",
     addressCountry: "JP",
   },
-  knowsLanguage: ["Japanese", "English", "Russian"],
+  knowsLanguage: ["Japanese", "English", "Russian", "Turkmen", "Turkish"],
   knowsAbout: [
     "Policy Science",
     "Econometrics",
