@@ -1,78 +1,36 @@
-# Begench Garahanov — Personal Website
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-A Jekyll-powered personal website built with the [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/) theme.
+## Getting Started
 
-## Live Site
-
-**URL:** [garahanov.com](https://garahanov.com)
-
-## Tech Stack
-
-- **Static Site Generator:** Jekyll 4.x
-- **Theme:** Minimal Mistakes 4.26.2 (contrast skin)
-- **Search:** Lunr.js
-- **Hosting:** GitHub Pages (or compatible static host)
-- **Language:** Ruby / Liquid / Markdown / SCSS
-
-## Local Development
+First, run the development server:
 
 ```bash
-# Install dependencies
-bundle install
-
-# Start the dev server
-bundle exec jekyll serve
-
-# Site will be available at http://localhost:4000
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-## Project Structure
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-```
-├── _config.yml          # Site configuration
-├── _data/               # Navigation, authors, UI text
-├── _pages/              # Static pages (About, CV, Publications, Projects, etc.)
-├── _posts/              # Blog posts (YYYY-MM-DD-title.markdown)
-├── assets/
-│   ├── css/main.scss    # Theme import + custom styles
-│   └── images/          # Profile photo and images
-├── 404.html             # Custom 404 page
-├── Gemfile              # Ruby dependencies
-└── index.markdown       # Homepage
-```
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## Adding Content
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-### New Blog Post
+## Learn More
 
-Create a file in `_posts/` named `YYYY-MM-DD-title.markdown`:
+To learn more about Next.js, take a look at the following resources:
 
-```markdown
----
-title: "Post Title"
-date: YYYY-MM-DD HH:MM:SS +0900
-categories: [category1, category2]
-tags: [tag1, tag2, tag3]
-excerpt: "One-line summary for previews."
----
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-Post content here.
-```
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-### New Page
+## Deploy on Vercel
 
-Create a file in `_pages/` with front matter:
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-```markdown
----
-title: "Page Title"
-permalink: /page-url/
-author_profile: true
----
-
-Page content here.
-```
-
-## License
-
-Content is © Begench Garahanov. Code structure is based on the Minimal Mistakes theme (MIT License).
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

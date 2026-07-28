@@ -1,0 +1,187 @@
+@import "tailwindcss";
+
+:root {
+  /* Midnight Observatory palette */
+  --obsidian-900: #050505;
+  --obsidian-800: #0b0c10;
+  --obsidian-700: #111318;
+  --ivory: #f5f5f0;
+  --graphite: #8a8a8e;
+  --graphite-dim: #48484a;
+  --focus-blue: #0a84ff;
+  --quiet-amber: #ff9f0a;
+  --emerald: #32d74b;
+
+  --background: var(--obsidian-900);
+  --foreground: var(--ivory);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-ivory: var(--ivory);
+  --color-graphite: var(--graphite);
+  --color-focus-blue: var(--focus-blue);
+  --color-quiet-amber: var(--quiet-amber);
+  --color-emerald: var(--emerald);
+  --color-obsidian-900: var(--obsidian-900);
+  --color-obsidian-800: var(--obsidian-800);
+  --color-obsidian-700: var(--obsidian-700);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html,
+body {
+  background: var(--obsidian-900);
+  color: var(--ivory);
+  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior: none;
+  min-height: 100dvh;
+}
+
+input,
+textarea,
+select {
+  font-size: 16px;
+}
+
+/* Safe-area helpers for iPhone */
+.qg-pt-safe { padding-top: max(env(safe-area-inset-top), 1rem); }
+.qg-pb-safe { padding-bottom: max(env(safe-area-inset-bottom), 1rem); }
+.qg-pl-safe { padding-left: max(env(safe-area-inset-left), 1rem); }
+.qg-pr-safe { padding-right: max(env(safe-area-inset-right), 1rem); }
+
+/* 44pt touch target */
+.qg-tap { min-height: 44px; min-width: 44px; }
+
+/* Slow, intentional pacing */
+:root {
+  --qg-slow: 1.2s;
+  --qg-breath: 1.5s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Scrollbars */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); border-radius: 9999px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.16); }
+
+::selection { background: rgba(10,132,255,0.3); color: var(--ivory); }
+
+/* Prose styles for markdown content */
+.prose-qg {
+  color: var(--ivory);
+  line-height: 1.8;
+}
+.prose-qg h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--ivory);
+}
+.prose-qg h3 {
+  font-size: 1.15rem;
+  font-weight: 400;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: var(--ivory);
+}
+.prose-qg p {
+  margin-bottom: 1.25rem;
+  color: rgba(245,245,240,0.85);
+}
+.prose-qg a {
+  color: var(--focus-blue);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(10,132,255,0.3);
+  transition: border-color 0.5s ease;
+}
+.prose-qg a:hover {
+  border-bottom-color: var(--focus-blue);
+}
+.prose-qg strong {
+  color: var(--ivory);
+  font-weight: 500;
+}
+.prose-qg em {
+  color: rgba(245,245,240,0.7);
+}
+.prose-qg ul, .prose-qg ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+.prose-qg ul { list-style: none; }
+.prose-qg ul li {
+  position: relative;
+  margin-bottom: 0.5rem;
+  color: rgba(245,245,240,0.85);
+}
+.prose-qg ul li::before {
+  content: "";
+  position: absolute;
+  left: -1rem;
+  top: 0.7rem;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--focus-blue);
+  opacity: 0.6;
+}
+.prose-qg ol { list-style: decimal; }
+.prose-qg ol li {
+  margin-bottom: 0.5rem;
+  color: rgba(245,245,240,0.85);
+}
+.prose-qg blockquote {
+  border-left: 2px solid rgba(10,132,255,0.4);
+  padding-left: 1.25rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: rgba(245,245,240,0.6);
+}
+.prose-qg code {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.875em;
+  background: rgba(255,255,255,0.06);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  color: var(--quiet-amber);
+}
+.prose-qg pre {
+  background: var(--obsidian-800);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 1.25rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+.prose-qg pre code {
+  background: transparent;
+  padding: 0;
+  color: var(--ivory);
+  font-size: 0.85rem;
+}
+.prose-qg img {
+  border-radius: 16px;
+  margin: 1.5rem 0;
+}
+.prose-qg hr {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  margin: 2.5rem 0;
+}
